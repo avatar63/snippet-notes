@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+        <title>register</title>
+    </head>
+    <body>
+        
+            <div class="Top">
+                <div id="logo">
+                    <a href="/Register/home"><img src="{% static 'images/Logo.svg' %}"></a>
+                </div>
+
+                <div id="navbar_top">
+                    Welcome to Snippet! Register to start Snipping.
+                </div>
+            </div>
+
+            <div class="Main_Container">
+                <form id="login" action="newuser/" method="post">
+                    {% csrf_token %}
+                    <label for="username">Enter User Name:<br><input placeholder="User Name" name="username"></label>
+                    <br><br>
+                    <label for="re-password">Enter Password:<br><input placeholder="password" type="password" name="password"></label>
+                    <br><br>
+                    <label for="e-mail">Enter E-Mail ID<br><input type="email" placeholder="E-Mail ID" name="email"></label>
+                    <br><br>
+                    <label for="birth">Date of Birth: <br><input type="date" name="dob"></label>
+                    <br><br>
+
+                    <label for="About">About: <br><textarea name="about" rows="8" style="padding: 0% 1%; font-size: large;"></textarea>
+                    <br><br>
+
+                    <input type="submit">
+                    <br><br>
+                    
+                </form>
+                       
+                
+            </div>
+        
+    </body>
+</html>

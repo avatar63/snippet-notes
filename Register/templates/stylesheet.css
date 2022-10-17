@@ -1,0 +1,192 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #111;
+    color: rgb(161, 161, 161); 
+    margin: 10% 20%;
+    font-family: monospace;
+    font-size: larger;
+}
+div.logo{
+    display: flex;
+    justify-content: center;
+}
+
+div.top{
+    display: flex;
+    justify-content:space-between;
+    padding: 1% 8%;
+    background-color: rgb(15, 48, 56);
+    border-radius: 15px;
+    
+}
+#navbar_top
+{
+    
+    text-align: center;
+    width:15%;
+}
+
+#nav_items
+{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    list-style-type:none;
+    font-size: large;
+    padding-top: 2%;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+    font-size: larger;
+}
+
+li{
+    padding-left: 10%;
+}
+
+div.Main_Container{
+    margin-top: 0.5%;
+    padding : 2%;
+    border-radius: 15px;
+    background-color: rgb(15, 48, 56);
+    display: flex;
+    justify-content: center;    
+}
+
+div.Main_Container form input
+{
+margin-top: 5%;
+width: 90%;
+height: 30px;
+background-color: rgb(145, 141, 141);
+border: none;
+border-radius: 15px;
+text-align: center;
+color: black;
+}
+div#newpost{
+    display: flex;
+    justify-content: space-around;
+    margin: 0% 20%;
+}
+div#newpost input{
+    margin-top: 5%;
+    width: auto;
+    height: 30px;
+    background-color: rgb(145, 141, 141);
+    border: none;
+    border-radius: 15px;
+    text-align: left;
+    color: black;
+}
+textarea{
+    margin-top: 5%;
+    background-color: rgb(145, 141, 141);
+    border: none;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    margin: 0;
+    padding: 0.5%;
+    width: auto;
+    min-width: 100%;
+    resize: none;
+    overflow: hidden;
+    justify-content: center;
+}
+
+
+div.Main_Container form
+{
+    font-size: medium;
+    text-align: center;
+    width: fit-content;
+}
+
+div.Daddy_Container {
+    margin-top: 0.5%;
+    padding : 2%;
+    border-radius: 15px;
+    background-color: rgb(15, 48, 56);
+    
+
+}
+div.Main_Container_pf{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+div#title{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
+table{
+    padding: 4% 8%;
+    background-color: rgb(20, 53, 61);
+    border-radius: 4%;
+}
+
+tr.postdata td {
+    padding: 2%;
+} 
+
+
+tr.postdata img {
+    padding-right: 5%;
+}
+
+div#head{
+    padding: 1% 5%;
+}
+
+div.newpost{
+    display: flex;
+    justify-content: center;
+}
+
+div#data{
+    font-size: large;
+    margin:1% 20%;
+}
+div#newpost{
+    display: flex;
+    justify-content: center;
+}
+
+div#newpost input{
+    
+    padding: 0% 2%;
+    margin: 5%;
+    width: auto;
+    height: 30px;
+    background-color: rgb(145, 141, 141);
+    border: none;
+    border-radius: 15px;
+    text-align: left;
+    color: black;
+}
+div#submit{
+    display: flex;
+    justify-content: center;
+}
+
+
+div#input1{
+    display: flex;
+    justify-content: center;
+}
+
+div#input2{
+    display: flex;
+    justify-content: center;
+}

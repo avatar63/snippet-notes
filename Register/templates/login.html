@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    </head>
+    <body>
+        
+            <div class="Top">
+                <div id="logo">
+                    <a href="/Register/home"><img src="{% static 'images/Logo.svg' %}"></a>
+                </div>
+                <div id="navbar_top">
+                    Welcome to Snippet! Login to start Snipping.
+                </div>
+            </div>
+
+            <div class="Main_Container">
+                <form action="" id="login" method="post"> 
+                    <label for="username">Enter User Name:<br><input name="username" placeholder="User Name"></label>
+                    <br><br>
+                    <label for="password">Enter Password :<br><input name="password" type="password"></label>
+                    <br><br>
+                    <input type="submit">
+                    <br><br>
+                    <a href="/Register/register">Not Registered? Register Now! </a>
+                </form>
+                       
+                
+            </div>
+        
+    </body>
+</html>
+
+
+
+

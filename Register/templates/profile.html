@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    </head>
+    <body>
+        
+            <div class="Top">
+                <div id="logo">
+                    <a href="/Register/home"><img src="{% static 'images/Logo.svg' %}"></a>
+                </div>
+
+                <div id="navbar_top">
+                    <ul id = "nav_items">
+                        <li><a href="/Register/home">Home</a></li>
+                        <li><a href="/Register/register">Logout</a></li>
+                        <li><a href="#">Post</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class = "Daddy_Container">
+                <div class="Main_Container_pf">
+                        <div>
+                            <h2>"{{log_name}}"</h2>
+                        </div>
+                            
+                        <div>
+                            <h3> About </h3><br>
+                            <p>{{about}}</p> <!-- Max Char count: 200 -->
+                        </div>
+                       
+                </div>
+                <hr style="margin: 2% 10%;">
+                
+                    <div id="title">
+                    <h2>User Information</h2>
+                    </div>
+                <div class="posts">
+                    <table border="0">
+                        <tr><td>Date of Birth:</td> <td> {{dob}} </td></tr>
+                        <tr><td>email ID: </td> <td> {{email}} </td></tr>
+                        
+                    </table>
+                    <hr style="margin: 2% 15%;">
+                
+                </div>
+
+
+            </div>
+            
+            
+
+    </body>
+</html>

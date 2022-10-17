@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    </head>
+    <body>
+        
+            <div class="Top">
+                <div id="logo">
+                    <a href="/Register/home"><img src="{% static 'images/Logo.svg' %}"></a>
+                </div>
+                <div id="navbar_top">
+                    Edit your Snip!
+                </div>
+            </div>
+
+            <div class="Daddy_Container">
+                <div id="newpost">
+                    <form id="makepost" action="editpost/{{ post.id }}" method="POST">
+                        {% csrf_token %}
+                        <div id="input1">
+                            <input type="text" name="category" value=" {{ post.category }} " style="padding: 0% 1%;font-size: medium;">
+                            <input type="text" name="title" value=" {{ post.title }} " style="padding: 0% 1%;font-size: medium;">
+                        </div>
+                        <div id="input2">
+                            <textarea name="pdata" rows="8" style="padding: 0% 1%; font-size: large;">{{ post.pdata }}</textarea>
+                        </div>
+                        <div id="submit">
+                            <input type="submit" value="submit edit">
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        
+    </body>
+</html>
