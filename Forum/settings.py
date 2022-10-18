@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-26jrujk@&rxw6h*7^%iss(mup)n@wm3^b6s5mewrkh)0*qj)i3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/Register/']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/Register/','snippet-notes.herokuapp.com']
 
 
 # Application definition
@@ -124,11 +124,16 @@ USE_TZ = True
 
 
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS=(
+#     os.path.join(BASE_DIR, "static/"),
+#  )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = 'static/'
-STATICFILES_DIRS=(
-    os.path.join(BASE_DIR, "static/"),
- )
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+ 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
