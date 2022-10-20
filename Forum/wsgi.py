@@ -8,10 +8,9 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "xxxx.settings")
 
 from django.core.wsgi import get_wsgi_application
-from whitenoise.django import DjangoWhiteNoise
-application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Forum.settings')
+
+application = get_wsgi_application()
