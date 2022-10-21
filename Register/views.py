@@ -103,7 +103,7 @@ def profile(request):
     n=0
     for i in desc:
         if i['user_name'] == name:
-            print(i)
+            
             break
         n+=1
     
