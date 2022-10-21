@@ -1,9 +1,10 @@
+from unicodedata import name
 from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Post,Registration,Users
 from django.urls import reverse
 
-
+name = ''
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -11,6 +12,9 @@ def login(request):
         users = Users.objects.all().values()
         for user in users:
             if user["userlist"] == username:
+                global name
+                print(username)
+                name = username
                 if user['passlist'] == password:
                     return HttpResponseRedirect(reverse('home'))
 
@@ -29,16 +33,30 @@ def register(request):
 
 def home(request):
     desc = Registration.objects.all().values()
-    about = desc[0]["about"]
-    name = desc[0]["user_name"]
+    n=0
+    for i in desc:
+        if i['user_name'] == name:
+            print(i)
+            break
+        n+=1    
+    about = desc[n]["about"]
+    uname = desc[n]["user_name"]
     
     posts = Post.objects.all().values()
-    posts = list(posts)
-    posts.reverse()
+    print(posts)
+    data=[]
+    for i in posts:
+        
+        if i['author'] == name:
+           data.append(i)
+           
+    data = list(data)
+    
+    data.reverse()
     template = loader.get_template('homepage.html')
     context = {
-        'posts' : posts,
-        'log_name' : name,
+        'data' : data,
+        'log_name' : uname,
         'about':about
     }
     return(HttpResponse(template.render(context, request)))
@@ -57,15 +75,14 @@ def newpostadd(request):
     d1 = request.POST['title']
     d2 = request.POST['category']
     d3 = request.POST['pdata']
-    post = Post(title=d1, category=d2, pdata=d3)
-    
+    d4 =  name
+    post = Post(title=d1, category=d2, pdata=d3, author = d4)
+    print(name)
     post.save()
     return HttpResponseRedirect(reverse('home'))
 
 def newuser(request):
-    Registration.objects.all().delete()
-    Post.objects.all().delete()
-    Users.objects.all().delete()
+    
     
     d1=request.POST['username']
     d2=request.POST['password']
@@ -83,11 +100,19 @@ def newuser(request):
 def profile(request):
     template = loader.get_template("profile.html")
     desc = Registration.objects.all().values()
-    about = desc[0]["about"]
-    name = desc[0]["user_name"]
-    dob = desc[0]["dob"]
-    email = desc[0]["email"]
-    context = {"log_name":name,
+    n=0
+    for i in desc:
+        if i['user_name'] == name:
+            print(i)
+            break
+        n+=1
+    
+    
+    about = desc[n]["about"]
+    uname = desc[n]["user_name"]
+    dob = desc[n]["dob"]
+    email = desc[n]["email"]
+    context = {"log_name":uname,
                 "about":about,
                 "dob":dob,
                 "email":email,              

@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.utils.timezone import now
 # Create your models here.
@@ -14,6 +15,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     category = models.CharField(max_length=50)
     pdata = models.CharField(max_length=1000)
+    author = models.CharField(max_length=255,default='none')
 
 
 class Users(models.Model):
