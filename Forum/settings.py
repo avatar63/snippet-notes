@@ -21,12 +21,13 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-26jrujk@&rxw6h*7^%iss(mup)n@wm3^b6s5mewrkh)0*qj)i3'
+# SECRET_KEY = 'django-insecure-26jrujk@&rxw6h*7^%iss(mup)n@wm3^b6s5mewrkh)0*qj)i3'
+SECRET_KEY=os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.getenv('WEBSITE_ALLOWED'),'127.0.0.1']
 
 
 # Application definition
@@ -125,11 +126,3 @@ STATICFILES_DIRS=(
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-<<<<<<< HEAD
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-=======
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-django_on_heroku.settings(locals())
->>>>>>> 3f353f724fe64a3c30ed5a95bb8b4d42b78280e9
