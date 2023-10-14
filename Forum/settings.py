@@ -125,4 +125,11 @@ STATICFILES_DIRS=(
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
+<<<<<<< HEAD
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+=======
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+django_on_heroku.settings(locals())
+>>>>>>> 3f353f724fe64a3c30ed5a95bb8b4d42b78280e9
