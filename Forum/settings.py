@@ -23,7 +23,7 @@ print(BASE_DIR)
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY='django-insecure-26jrujk@&rxw6h*7^%iss(mup)n@wm3^b6s5mewrkh)0*qj)i3'
 # SECRET_KEY=os.getenv('SECRET_KEY')
-SECRET_KEY='*a9f&^1%)r#l3n_7y0*g5v$g=v)hb(et0ruwruddv&(=&@6ud@'
+SECRET_KEY='*7h(6ve26sx2=mv-8%k9*u&o1r-p7n-x057xo&sk7y7i9rr#yyt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
