@@ -82,12 +82,23 @@ WSGI_APPLICATION = 'Forum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'ql_server.pyodbc',
+        'NAME': BASE_DIR / 'snippet-notesDB',
+        'HOST':'snippetnotesdb.database.windows.net',
+        'PORT':'',
+        'USER':'avatar_007',
+        'PASSWORD':'Namita@76',
+        'AUTOCOMMIT':'True',
+
+
+        'OPTIONS':{
+            'driver':'ODBC Driver 13 for SQL Server',
+        }
+
     }
 }
 
-
+DATABASE_CONNECTION_POOLING = False
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
