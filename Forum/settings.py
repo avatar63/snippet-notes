@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'Forum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
+        'ENGINE': 'mysql',
         'NAME': str(BASE_DIR / 'snippet-notesDB'),
         'HOST':'snippetnotesdb.database.windows.net',
         'PORT':'',
