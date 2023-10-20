@@ -82,21 +82,19 @@ WSGI_APPLICATION = 'Forum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': str(BASE_DIR / 'snippet-notesDB'),
-        'HOST':'snippetnotesdb.database.windows.net',
-        'PORT':'',
-        'USER':'avatar_007',
-        'PASSWORD':'Namita@76',
-        'AUTOCOMMIT':'True',
-
-
-        'OPTIONS':{
-            'driver':'ODBC Driver 18 for SQL Server',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'snippetnotes',
+        'USER': 'admin1@pain',
+        'PASSWORD': 'home_w0rk',
+        'HOST': 'pain.postgres.database.azure.com',
+        'PORT': '5432',
+        "OPTIONS":{
+            "sslmode":"require",
         }
+    }
 
     }
-}
+
 
 DATABASE_CONNECTION_POOLING = False
 # Password validation
