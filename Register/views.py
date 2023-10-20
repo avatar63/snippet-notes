@@ -122,7 +122,7 @@ def profile(request):
 
 
 def edit(request, id):
-    post = Post.objects.get(id=id)
+    post = Post.bjects.get(id=id)
     template=loader.get_template("edit.html")
     context={
         'post':post,
